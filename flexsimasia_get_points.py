@@ -38,6 +38,7 @@ def check_login_status(s, number_c):
     res = s.get(test_url)
     res.encoding = "utf-8"
     test_title = re.findall("<title>.*?</title>", res.text)
+    print(test_title)
     if test_title[0] != "<title>个人资料 -  全球FlexSim系统仿真中文论坛 -  Powered by Discuz!</title>":
         print("第" + str(number_c) + "个帐户登录失败！")
         return False
