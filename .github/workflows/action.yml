@@ -21,6 +21,6 @@ jobs:
       run: python -m pip install --upgrade requests pyaes
     - name: 'Get points'
       env:
-        HOSTLOC_USERNAME: ${{ secrets.FLEXSIMASIA_USERNAME }}
-        HOSTLOC_PASSWORD: ${{ secrets.FLEXSIMASIA_PASSWORD }}
+        FLEXSIMASIA_USERNAME: ${{ secrets.FLEXSIMASIA_USERNAME }}
+        FLEXSIMASIA_PASSWORD: ${{ secrets.FLEXSIMASIA_PASSWORD }}
       run: python flexsimasia_get_points.py
